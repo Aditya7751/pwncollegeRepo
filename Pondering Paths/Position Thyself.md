@@ -3,7 +3,7 @@
 This Problem Introduces the `cd` command(Change Directory), allowing users to pass paths as arguments
 
 - in this problem I start off by determining my current position by using `~`
-- I then follow it by using the `/challenge/run` command to figure out the target destination, which is /etc/apt/sources.list.d
+- I then follow it by using the `/challenge/run` command to figure out the target destination, which is `/etc/apt/sources.list.d`
 - I utilize the `cd` command to reach this directory, finishing it off by rerunning `/challege/run`
 ```bash
 root@DESKTOP-MPJ395R:~# ssh -i ./key hacker@dojo.pwn.college
