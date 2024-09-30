@@ -26,5 +26,4 @@ Correct!!!
 /challenge/run is an absolute path, invoked from the right directory!
 Here is your flag:
 pwn.college{E9SFiKSeYSUEtLrpFEAQS3cJFtp.ddDN1QDLzgTN0czW}
-hacker@paths~position-elsewhere:/usr/share/doc$
 ```
