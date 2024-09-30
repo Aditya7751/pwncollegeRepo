@@ -9,3 +9,4 @@ BOOM!!!
 Here is your flag:
 pwn.college{ATyokDU_VDjhOr0_IqxoOwHwQ9K.dhzN5QDLzgTN0czW}
 ```
+In this Case /pwn is the Root Directory
