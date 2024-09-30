@@ -22,5 +22,4 @@ Correct!!!
 /challenge/run is an absolute path, invoked from the right directory!
 Here is your flag:
 pwn.college{A2Dp7-Q-ay1-96GqbfNrOJX8a77.dZDN1QDLzgTN0czW}
-hacker@paths~position-thy-self:/etc/apt/sources.list.d$
 ```
