@@ -7,7 +7,7 @@ The Problem instructs us to run `/challenge/run` using argument that needs to me
 > - The path must be inside your home directory.
 > - Before expansion, your argument must be three characters or less.
 
-in lieu of these instructions and the previous discussion, I tried using the absolute path ~/~ as an argument since it would expand to /home/hacker/~
+in lieu of these instructions and the previous discussion, I tried using the absolute path `~/~` as an argument since it would expand to `/home/hacker/~`
 
 ```bash
 root@DESKTOP-MPJ395R:~# ssh -i ./key hacker@dojo.pwn.college
