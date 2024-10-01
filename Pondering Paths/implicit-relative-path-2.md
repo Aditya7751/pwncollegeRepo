@@ -18,4 +18,4 @@ Correct!!!
 Here is your flag:
 pwn.college{QW_rG5bzrDY2_1rKJltkFIqlSvE.dFTN1QDLzgTN0czW}
 ```
-Note:Linux Doesnt automatically run `run` as a safety measure, as accidentally executing programs may have undesired consequences
+Note: Linux Doesnt automatically run `run` as a safety measure, as accidentally executing programs may have undesired consequences
