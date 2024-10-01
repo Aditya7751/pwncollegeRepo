@@ -13,7 +13,10 @@ My Approach:
 - I change directories using `cd /opt/aflplusplus/nyx_mode/QEMU-Nyx/tests/tcg/mips/user/ase/msa/int-add` and follow it with `ls` discovering CLUE, on `cat CLUE` it tells me the next clue is in `/usr/share/doc/gir1.2-gdkpixbuf-2.0`
 - I change directories using `cd /usr/share/doc/gir1.2-gdkpixbuf-2.0`, followed by `ls` discovering SECRET, on `cat SECRET` it leads me to `/usr/share/doc/librbd1`
 - since the clue in `/usr/share/doc/librbd1` is hidden, I first `cd /usr/share/doc/librbd1` followed by `ls -a` to show the hidden files too, I discover .NUGGET
-- on `cat .NUGGET`
+- on `cat .NUGGET`, it tells me the next clue is in `/opt/aflplusplus/nyx_mode/QEMU-Nyx/roms/qboot`
+- consequently on repeating steps similar to those mentioned above like `cd` into the directory and `ls`, I find TIP, on `cat` TIP, i am told to check `/opt/linux/linux-5.4/arch/parisc/include/asm`
+- this one has a hidden file, so I use `ls -a` to check for it, finding .README, on executing `cat .README`, the final clue will be in `/usr/share/xml/iso-codes`
+- on changing directories and using `ls` I find lead, on `cat LEAD` I finally get the flag
 
 
 
