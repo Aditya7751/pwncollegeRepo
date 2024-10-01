@@ -1,7 +1,5 @@
 # Position yet elsewhere
 
-# Position Elsewhere
-
 This Problem has very Similar Motifs to `Postion Thyself` and `Position Elsewhere`, using a similar approach I followed these steps:
 
 - in this problem I start off by determining my current position by using `~`
