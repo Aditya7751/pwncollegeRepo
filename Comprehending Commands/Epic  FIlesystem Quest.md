@@ -10,7 +10,10 @@ My Approach:
 - WHISPER-TRAPPED leads me to `/usr/local/lib/python3.8/dist-packages/jinja2/__pycache__` but the clue here is delayed so I need to `cd` into the directory before seeing the clue there
 - I run `cd /usr/local/lib/python3.8/dist-packages/jinja2/__pycache__` followed by `ls` to find the next hint SNIPPET
 - on executing `cat SNIPPET`, it tells me the next clue is in `/opt/aflplusplus/nyx_mode/QEMU-Nyx/tests/tcg/mips/user/ase/msa/int-add`
-
+- I change directories using `cd /opt/aflplusplus/nyx_mode/QEMU-Nyx/tests/tcg/mips/user/ase/msa/int-add` and follow it with `ls` discovering CLUE, on `cat CLUE` it tells me the next clue is in `/usr/share/doc/gir1.2-gdkpixbuf-2.0`
+- I change directories using `cd /usr/share/doc/gir1.2-gdkpixbuf-2.0`, followed by `ls` discovering SECRET, on `cat SECRET` it leads me to `/usr/share/doc/librbd1`
+- since the clue in `/usr/share/doc/librbd1` is hidden, I first `cd /usr/share/doc/librbd1` followed by `ls -a` to show the hidden files too, I discover .NUGGET
+- on `cat .NUGGET`
 
 
 
