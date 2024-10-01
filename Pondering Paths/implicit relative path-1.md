@@ -4,10 +4,10 @@ While The Last Few Problems focused on using absolute paths, this one relies on 
 
 To Start Off:
 
-*I started by using `~` to find out my current location
-*I ran `/challenge/run` to get information about the target directory
-*I used `cd /` to switch to the `/` or root directory
-*executed `challenge/run` to find the flag
+- I started by using `~` to find out my current location
+- I ran `/challenge/run` to get information about the target directory
+- I used `cd /` to switch to the `/` or root directory
+- executed `challenge/run` to find the flag
 
 ```bash
 root@DESKTOP-MPJ395R:~# ssh -i ./key hacker@dojo.pwn.college
