@@ -8,7 +8,7 @@ Learning to access and read Documentation is key to finding out what a lot of pr
 
 As The Problem Suggested I used the `--giveflag` argument with `/challenge/challenge` to get the flag, with the overall command being `/challenge/challenge --giveflag`
 
-## Steps
+## Code
 ```bash
 root@DESKTOP-MPJ395R:~# ssh -i ./key hacker@dojo.pwn.college
 Connected!
