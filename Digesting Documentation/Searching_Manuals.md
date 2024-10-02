@@ -1,9 +1,11 @@
 # searching manuals
 
 ## introduction
-
+This Problem heavily relies around searching manuals, with a hidden argument in there that will meet the conditions required
 ## approach
-
+- I start by opening the manual using `man challenge`
+- after a lot of reading I find the argument `--zvevr`
+- I executed `/challenge/challenge --zvevr` to retrieve the key
 ## code
 ```bash
 hacker@man~searching-manuals:~$ man challenge
