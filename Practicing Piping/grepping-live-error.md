@@ -1,6 +1,8 @@
 # Grepping Live Error
 ## Introduction
+This Problem also has us grepping for the flag, however the last problem had a intermediate step where we redirected the output to `/tmp/data.txt`, this one introduces the pipe operator `|` which can be conceptualized as very similar to an actual plumbing pipe(the `tee` command also helps prove this), but the problem wants us to redirect the output of `/challenge/run` to the grep argument through pipes
 ## Approach
+- `/challenge/run |` effectively pipes whatever the output of the program is to `grep pwn.college` as an argument
 ## Code
 ```bash
 Connected!
