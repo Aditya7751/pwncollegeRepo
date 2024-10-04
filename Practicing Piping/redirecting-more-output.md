@@ -1,14 +1,9 @@
 # Redirecting more Output
-
 ## Introduction
 This Problems builds on the concepts taught in the last one , but requires one to understand the working of the commands
-
 ## Approach
-
 - Similarly to the Last Problem I just redirect `/challenge/run` output to `myflag` by executing `/challenge/run > myflag`
 - I then read the contents of `myflag` using `cat myflag`
-
-
 ## Code
 ```bash
 Connected!
