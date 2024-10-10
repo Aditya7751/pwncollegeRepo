@@ -1,6 +1,10 @@
 # Foregrounding Processes
 ## Introduction
+This Problem has us foregrounding backgrounded processes using `fg` in succession of `bg`
 ## Approach
+- I start by executing `/challenge/run`, and then suspending it using Ctrl+Z
+- then I background the process using `bg`
+- finally I foreground it using `fg`, retrieving the key
 ## Code
 ```bash
 Connected!
