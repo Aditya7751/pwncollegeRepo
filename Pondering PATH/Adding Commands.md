@@ -1,0 +1,269 @@
+# Adding Commands
+## Introduction
+This Problem requires a similar approach to the last one, I will add the directory for `win.sh` , so that linux can recognize it by its bare name, and give it appropriate permissions to run
+## Approach
+## Code
+- First I check all the directories in the PATH Variable, I guess that `/run/workspace/bin` probably has all the inbuilt commands, this guess was right as I find cat here
+- I use `nano win.sh` to make the script
+- in the script I invoke the absolute path for `cat` to run,which is `/run/workspace/bin/cat`
+- then I run `PATH=$PATH:/home/hacker` as `/home/hacker` is the home directory where `win.sh` is
+- then I use `/challenge/run` hoping to see the flag
+- while initally I get no flag, I realize I have root access now, so I run `cat /flag` for the answer
+### win.sh
+```bash
+#!/bin/bash
+/run/workspace/bin/cat /flag
+```
+### Main terminal
+```bash
+Connected!
+hacker@path~adding-commands:~$ echo $PATH
+/run/challenge/bin:/run/workspace/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+hacker@path~adding-commands:~$ ls /run/workspace/bin
+ 2to3                                 isympy                     qemu-system-sh4
+ 2to3-3.11                            jlpm                       qemu-system-sh4eb
+ ROPgadget                            join                       qemu-system-sparc
+ Thunar                               jsonpointer                qemu-system-sparc64
+'['                                   jsonschema                 qemu-system-tricore
+ accessdb                             jupyter                    qemu-system-x86_64
+ addpart                              jupyter-console            qemu-system-xtensa
+ addr2line                            jupyter-dejavu             qemu-system-xtensaeb
+ afl-addseeds                         jupyter-events             qemu-x86_64
+ afl-analyze                          jupyter-execute            qemu-xtensa
+ afl-c++                              jupyter-kernel             qemu-xtensaeb
+ afl-cc                               jupyter-kernelspec         qtpy
+ afl-cgroup                           jupyter-lab                r2
+ afl-clang-fast                       jupyter-labextension       r2agent
+ afl-clang-fast++                     jupyter-labhub             r2pm
+ afl-clang-lto                        jupyter-migrate            r2r
+ afl-clang-lto++                      jupyter-nbconvert          rabin2
+ afl-cmin                             jupyter-notebook           radare2
+ afl-cmin.bash                        jupyter-qtconsole          radiff2
+ afl-fuzz                             jupyter-run                rafind2
+ afl-g++                              jupyter-server             ragg2
+ afl-g++-fast                         jupyter-troubleshoot       rahash2
+ afl-gcc                              jupyter-trust              randpkt
+ afl-gcc-fast                         kill                       ranlib
+ afl-gotcpu                           last                       rappel
+ afl-ld-lto                           lastb                      rarp
+ afl-lto                              ld                         rarun2
+ afl-lto++                            ld.bfd                     rasign2
+ afl-network-client                   ld.gold                    rasm2
+ afl-network-server                   ld.so                      ravc2
+ afl-persistent-config                ldattach                   rawshark
+ afl-plot                             ldconfig                   rax2
+ afl-qemu-trace                       ldd                        rdma
+ afl-showmap                          less                       readelf
+ afl-system-config                    lessecho                   readelf.py
+ afl-tmin                             lesskey                    readlink
+ afl-whatsup                          lexgrog                    readmsg
+ agetty                               libcdb                     readprofile
+ angr                                 link                       realpath
+ apropos                              linux32                    rename
+ ar                                   linux64                    renice
+ arp                                  lmtpd                      reordercap
+ arpd                                 ln                         reset
+ as                                   lnstat                     resizepart
+ asm                                  locale                     rev
+ assistant                            localedef                  rfkill
+ awk                                  logger                     rm
+ b2sum                                login                      rmdir
+ base32                               logname                    ropper
+ base64                               look                       route
+ basename                             losetup                    routel
+ basenc                               ls                         rpyc_classic
+ bash                                 lsblk                      rpyc_classic.py
+ bash-suid                            lscpu                      rpyc_registry
+ bashbug                              lsfd                       rpyc_registry.py
+ blkdiscard                           lsipc                      rtacct
+ blkid                                lsirq                      rtcwake
+ blkpr                                lslocks                    rtmon
+ blkzone                              lslogins                   rtstat
+ blockdev                             lsmem                      runcon
+ bridge                               lsns                       runuser
+ c++                                  mail                       rview
+ c++filt                              mailutils                  rvim
+ cal                                  mailutils-config           sage
+ capinfos                             main                       scapy
+ captoinfo                            make                       scp
+ captype                              makedb                     scramble
+ cat                                  mako-render                script
+ catman                               man                        scriptlive
+ cc                                   man-recode                 scriptreplay
+ cfdisk                               mandb                      sed
+ chardetect                           manpath                    send2trash
+ chcon                                markdown-it                seq
+ chcpu                                mcookie                    setarch
+ checksec                             md5sum                     setpriv
+ chfn                                 mda                        setsid
+ chgrp                                mergecap                   setterm
+ chmem                                mesg                       sfdisk
+ chmod                                messages                   sftp
+ choom                                mii-tool                   sh
+ chown                                mimeview                   sh-suid
+ chroot                               minidump                   sha1sum
+ chrt                                 mkdir                      sha224sum
+ chsh                                 mkfifo                     sha256sum
+ cksum                                mkfs                       sha384sum
+ clear                                mkfs.bfs                   sha512sum
+ code                                 mkfs.cramfs                sharkd
+ code-server                          mkfs.minix                 shellcraft
+ col                                  mknod                      shred
+ colcrt                               mkswap                     shuf
+ colrm                                mktemp                     sieve
+ column                               mmdbresolve                size
+ comm                                 more                       slabtop
+ common                               mount                      slattach
+ comsatd                              mountpoint                 sleep
+ constgrep                            movemail                   sln
+ coreutils                            mu-mh                      sort
+ cp                                   mv                         sotruss
+ cpp                                  namei                      split
+ csplit                               nameif                     sprof
+ ctags                                nc                         ss
+ ctrlaltdel                           ncat                       ssh
+ ctstat                               netstat                    ssh-add
+ curl                                 nice                       ssh-agent
+ cut                                  nisdomainname              ssh-copy-id
+ cyclic                               nl                         ssh-entrypoint
+ date                                 nm                         ssh-keygen
+ dbus-cleanup-sockets                 nmap                       ssh-keyscan
+ dbus-daemon                          nohup                      sshd
+ dbus-launch                          nologin                    startxfce4
+ dbus-monitor                         normalizer                 stat
+ dbus-run-session                     nping                      stdbuf
+ dbus-send                            nproc                      strace
+ dbus-test-tool                       nscd                       strace-log-merge
+ dbus-update-activation-environment   nsenter                    strings
+ dbus-uuidgen                         nstat                      strip
+ dcb                                  numfmt                     stty
+ dd                                   objcopy                    sudo
+ debug                                objdump                    sulogin
+ decodemail                           od                         sum
+ delpart                              partx                      swaplabel
+ devlink                              paste                      swapoff
+ df                                   pasteurize                 swapon
+ dir                                  pathchk                    switch_root
+ dircolors                            pcprofiledump              sync
+ dirname                              pgrep                      sysctl
+ disablenx                            phd                        tabs
+ disasm                               pidof                      tac
+ dmesg                                pinky                      tail
+ dnsdomainname                        pip                        taskset
+ dojo-code                            pip3                       tc
+ dojo-desktop                         pip3.11                    tcpdump
+ dojo-init                            pipesz                     tcpdump.4.99.4
+ dojo-service                         pivot_root                 tee
+ domainname                           pkill                      template
+ dotlock                              pldd                       test
+ du                                   plipconfig                 text2pcap
+ dumpcap                              pmap                       thunar
+ dumpsig.py                           pop3d                      thunar-settings
+ dwp                                  popauth                    tic
+ ebrowse                              pr                         timeout
+ echo                                 printenv                   tipc
+ editcap                              printf                     tload
+ egrep                                prlimit                    top
+ eject                                progressbar                touch
+ elf2dmp                              ps                         tox
+ elfdiff                              ptx                        tput
+ elfedit                              putmail                    tr
+ elfpatch                             pwait                      true
+ emacs                                pwd                        truncate
+ emacs-29.4                           pwdx                       tset
+ emacsclient                          pwn                        tshark
+ env                                  pwndbg                     tsort
+ errno                                pwnstrip                   ttx
+ etags                                pwntools-gdb               tty
+ ex                                   pybabel                    tzselect
+ exo-desktop-item-edit                pydoc                      uclampset
+ exo-open                             pydoc3                     ul
+ expand                               pydoc3.11                  umount
+ expr                                 pyftmerge                  uname
+ f2py                                 pyftsubset                 uname26
+ factor                               pygmentize                 unexpand
+ fadvise                              pyjson5                    unhex
+ fallocate                            pylupdate5                 uniq
+ false                                pyrcc5                     unlink
+ fdisk                                pyserial-miniterm          unshare
+ fgrep                                pyserial-ports             update
+ fincore                              pysmt-install              uptime
+ find                                 python                     users
+ findfs                               python-config              utmpdump
+ findmnt                              python-dojo-suid           uuidd
+ firefox                              python-suid                uuidgen
+ flask                                python3                    uuidparse
+ flock                                python3-config             vdir
+ fmt                                  python3.11                 vdpa
+ fold                                 python3.11-config          version
+ fonttools                            pyuic5                     vi
+ free                                 qemu-aarch64               view
+ frm                                  qemu-aarch64_be            vim
+ from                                 qemu-alpha                 vimdiff
+ fsck                                 qemu-arm                   vimtutor
+ fsck.cramfs                          qemu-armeb                 virtualenv
+ fsck.minix                           qemu-cris                  vmstat
+ fsfreeze                             qemu-edid                  w
+ fstrim                               qemu-ga                    waitpid
+ futurize                             qemu-hexagon               wall
+ g++                                  qemu-hppa                  watch
+ gawk                                 qemu-i386                  wc
+ gawkbug                              qemu-img                   wdctl
+ gcc                                  qemu-io                    wget
+ gcore                                qemu-kvm                   whatis
+ gdb                                  qemu-loongarch64           whereis
+ gdb-add-index                        qemu-m68k                  which
+ gdbserver                            qemu-microblaze            who
+ geckodriver                          qemu-microblazeel          whoami
+ gef                                  qemu-mips                  wipefs
+ gencat                               qemu-mips64                wireshark
+ genl                                 qemu-mips64el              write
+ get-afl-qemu-libcompcov-so           qemu-mipsel                wsdump
+ get-libdislocator-so                 qemu-mipsn32               x86_64
+ get-libtokencap-so                   qemu-mipsn32el             xargs
+ getconf                              qemu-nbd                   xfce4-accessibility-settings
+ getopt                               qemu-nios2                 xfce4-appearance-settings
+ ghidra                               qemu-or1k                  xfce4-appfinder
+ gprof                                qemu-ppc                   xfce4-display-settings
+ grep                                 qemu-ppc64                 xfce4-find-cursor
+ groups                               qemu-ppc64le               xfce4-keyboard-settings
+ guimb                                qemu-pr-helper             xfce4-mime-helper
+ hardlink                             qemu-riscv32               xfce4-mime-settings
+ head                                 qemu-riscv64               xfce4-mouse-settings
+ hex                                  qemu-s390x                 xfce4-panel
+ hexdump                              qemu-sh4                   xfce4-popup-applicationsmenu
+ hostid                               qemu-sh4eb                 xfce4-popup-directorymenu
+ hostname                             qemu-sparc                 xfce4-popup-windowmenu
+ httpx                                qemu-sparc32plus           xfce4-session
+ hwclock                              qemu-sparc64               xfce4-session-logout
+ i386                                 qemu-storage-daemon        xfce4-session-settings
+ iconv                                qemu-system-aarch64        xfce4-settings-editor
+ iconvconfig                          qemu-system-alpha          xfce4-settings-manager
+ id                                   qemu-system-arm            xfce4-terminal
+ ida64                                qemu-system-avr            xfconf-query
+ idl2wrs                              qemu-system-cris           xfdesktop
+ idle                                 qemu-system-hppa           xfdesktop-settings
+ idle3                                qemu-system-i386           xflock4
+ idle3.11                             qemu-system-loongarch64    xfrun4
+ ifconfig                             qemu-system-m68k           xfsettingsd
+ ifstat                               qemu-system-microblaze     xfwm4
+ imap4d                               qemu-system-microblazeel   xfwm4-settings
+ infocmp                              qemu-system-mips           xfwm4-tweaks-settings
+ infotocap                            qemu-system-mips64         xfwm4-workspace-settings
+ install                              qemu-system-mips64el       xtrace
+ ionice                               qemu-system-mipsel         xxd
+ ip                                   qemu-system-nios2          yes
+ ipcmk                                qemu-system-or1k           ypdomainname
+ ipcrm                                qemu-system-ppc            z3
+ ipcs                                 qemu-system-ppc64          zdump
+ ipython                              qemu-system-riscv32        zic
+ ipython3                             qemu-system-riscv64        zramctl
+ irqtop                               qemu-system-rx
+ isosize                              qemu-system-s390x
+hacker@path~adding-commands:~$ nano win.sh
+hacker@path~adding-commands:~$ export PATH=$PATH:/home/hacker
+hacker@path~adding-commands:~$ /challenge/run
+Invoking 'win'....
+root@path~adding-commands:~# cat /flag
+pwn.college{IxuNIVbNXRVkx8Ftxsn0ewjVt-h.dZzNyUDLzgTN0czW}
+```
